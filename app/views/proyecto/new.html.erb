@@ -1,0 +1,35 @@
+<form action="/proyecto/create" method="POST">
+    <input type="hidden" name="authenticity_token" value="<=% form_authenticity_token %>">
+
+    <div class="form-group">
+        <label for="name">Nombre</label>
+        <input name="name" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="description">Descripcion</label>
+        <input name="description" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="date_start">Fecha de inicio</label>
+        <input type='date' name="date_start" class="form-control"> </input>
+    </div>
+    
+    <div class="form-group">
+        <label for="date_end">Fecha de fin</label>
+        <input type='date' name="date_end" class="form-control"> </input>
+    </div>
+
+    <div class="form-group">
+        <label for="state">Estado</label>
+        <select name="state">
+            <option value="propuesta">propuesta</option>
+            <option value="progreso">progreso</option>
+            <option value="terminado">terminado</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
+<%= link_to 'Ir al Dashboard', proyecto_dashboard_path %><br>
